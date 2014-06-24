@@ -73,17 +73,19 @@ $dark-midnight:                   rgb(44, 62, 80);
           box-shadow: inset $first-value $second-value $third-value $fourth-value rgba($fifth-value);  
 }
 
-@mixin opacity($first-value, $second-value) {
-  filter: alpha(opacity=$second-value);
+@mixin opacity($value) {
+  $ie: $value * 100;
+  -ms-filter: "alpha(opacity=$ie)";
+  filter: alpha(opacity=$ie);
   -webkit-opacity: $first-value;
      -moz-opacity: $first-value;
           opacity: $first-value;
 }
 
 @mixin box-sizing {
-  -webkit-box-sizing: box-content;
-     -moz-box-sizing: box-content;
-          box-sizing: box-content;
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 //
