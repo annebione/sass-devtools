@@ -45,6 +45,7 @@ header ul li {
   display: inline-block;
   background: white;
   padding: 0.625em;
+  -ms-filter: "alpha(opacity=$ie)";
   filter: alpha(opacity=90);
   -webkit-opacity: 0.9;
   -moz-opacity: 0.9;
@@ -117,6 +118,7 @@ header .navigation li {
   display: inline-block;
   background: white;
   padding: 0.625em;
+  -ms-filter: "alpha(opacity=$ie)";
   filter: alpha(opacity=90);
   -webkit-opacity: 0.9;
   -moz-opacity: 0.9;
@@ -383,7 +385,7 @@ footer .logo {
   header .navigation ul li a {
     color: #cc6699;
   }
-  header .navigation ul li a:after {
+  header .navigation ul li a:hover {
     font-family: "FontAwesome";
     content: "\f061";
     float: right;

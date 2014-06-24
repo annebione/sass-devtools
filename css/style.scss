@@ -59,7 +59,7 @@ header {
       display: inline-block;
       background: $white;
       padding: convertoEM(10);
-      @include opacity(.9, 90);
+      @include opacity(0.9);
       @include border-radius(convertoEM(2));
 
       a {
@@ -123,12 +123,12 @@ header {
           color: $white;
           text-align: center;
           padding-left: 0;
-        }
 
-        a:hover {
-          background: transparent;
-          text-align: center;
-          color: $dark-pink;
+          &:hover {
+          	background: transparent;
+            text-align: center;
+            color: $dark-pink;
+          }
         }
       }
     }
@@ -138,7 +138,7 @@ header {
   	  display: inline-block;
   	  background: $white;
   	  padding: convertoEM(10);
-  	  @include opacity(.9, 90);
+  	  @include opacity(0.9);
   	  @include border-radius(convertoEM(2));
 
   	  a {
@@ -152,10 +152,10 @@ header {
   	    color: $pink;
   	    padding-top: convertoEM(1);
   	  }
-  	}
 
-  	li:hover {
-  	  background: $dark-pink;
+  	  &:hover {
+  	  	background: $dark-pink;
+  	  }
   	}
   }
 
@@ -200,13 +200,13 @@ header {
         a {
           color: $white;
         }
-      }
 
-      li:hover {
-        background: $pink;
+        &:hover {
+          background: $pink;
 
-        a {
-          color: $white;
+          a {
+            color: $white;
+          }
         }
       }
     }
@@ -445,18 +445,18 @@ footer {
 
           a {
             color: $pink;
+
+            &:hover {
+              font-family: "FontAwesome";
+              content: "\f061";
+              float: right;
+              margin-right: convertoEM(20);
+            }
           }
 
-          a:after {
-            font-family: "FontAwesome";
-            content: "\f061";
-            float: right;
-            margin-right: convertoEM(20);
+          &:hover {
+          	background: #111;
           }
-        }
-
-        li:hover {
-          background: #111;
         }
       }
     }

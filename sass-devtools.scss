@@ -77,9 +77,9 @@ $dark-midnight:                   rgb(44, 62, 80);
   $ie: $value * 100;
   -ms-filter: "alpha(opacity=$ie)";
   filter: alpha(opacity=$ie);
-  -webkit-opacity: $first-value;
-     -moz-opacity: $first-value;
-          opacity: $first-value;
+  -webkit-opacity: $value;
+     -moz-opacity: $value;
+          opacity: $value;
 }
 
 @mixin box-sizing {
