@@ -1,58 +1,322 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<meta charset="UTF-8">
-	<title>Sass Devtools - Sass Devtools is an Open Source tool with features that will help your productivity with the SASS.</title>
-	<link rel="stylesheet" href="css/style.css">
-	<link rel="stylesheet" href="css/font-awesome.min.css">
-	<link rel="icon" href="images/favicon.png">
+   <!-- Metas -->
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, user-scalable=no">
+   
+   <title>Sass Devtools - Sass Devtools is an Open Source tool with features that will help your productivity with the SASS.</title>
+   
+   <!-- CSS -->
+   <link rel="stylesheet" href="css/style.css">
+   <link rel="stylesheet" href="css/font-awesome.min.css">
+   <link rel="icon" href="images/favicon.png">
 
-	<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+   <!-- Scripts -->
+   <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
 </head>
 <body>
 
 <header>
-	<div class="container">
-		<h1>Sass Devtools v1.0</h1>
-		<h3>Sass Devtools is an Open Source tool with features that will help your productivity with the SASS.</h3>
-		<div class="buttons">
-			<ul>
-				<li><i class="fa fa-download"></i><a href="sass-devtools.scss">Download</a></li>
-				<li><i class="fa fa-github"></i><a href="https://github.com/jaoz/sass-devtools" target="_blank">Github</a></li>
-				<li><i class="fa fa-facebook"></i><a href="#">Facebook</a></li>
-			</ul>
-		</div>
-	</div>
-	<nav class="navigation">
-		<div class="content-navigation">
-			<div class="logo"></div>
-			<button><i class="fa fa-navicon"></i></button>
-			<ul>
-				<li><a href="sass-devtools.scss">Download</a></li>
-				<li><a href="https://github.com/jaoz/sass-devtools">Github</a></li>
-				<li><a href="#">Facebook</a></li>
-			</ul>
-		</div>
-	</nav>
+   <div class="container">
+      <h1>Sass Devtools v1.0</h1>
+      <h3>Sass Devtools is an Open Source tool with features that will help your productivity with the SASS.</h3>
+      <div class="buttons">
+         <ul>
+            <li><i class="fa fa-download"></i><a href="sass-devtools.scss" target="_blank">Download</a></li>
+            <li><i class="fa fa-github"></i><a href="https://github.com/jaoz/sass-devtools" target="_blank">Github</a></li>
+         </ul>
+      </div>
+   </div>
+   <nav class="navigation">
+      <div class="content-navigation">
+         <div class="logo"></div>
+         <button><i class="fa fa-navicon"></i></button>
+         <ul>
+            <li><a href="sass-devtools.scss" target="_blank">Download</a></li>
+            <li><a href="https://github.com/jaoz/sass-devtools" target="_blank">Github</a></li>
+         </ul>
+      </div>
+   </nav>
 </header>
 
-<script>
-$(window).scroll(function(){
-  var menu = $('header .navigation');
-  var scrolltop = $(window).scrollTop();
-  if(scrolltop >= 310) {
-  	menu.css('display', 'block');
-  } else {
-  	menu.css('display', 'none');
-  }
-});
+<div class="container">
+   <div class="content-sass">
+      <h1># How to install?</h1>
+      <div id="how-to-install">
+         <p>Well, for you to begin enjoying Sass Devtools, you need to download the file <span class="auto">.scss</span> and incorporate it in your file <span class="auto">.scss</span>.</p>
+         <span><b>@import</b> "sass-devtools.scss"</span>
+      </div>
 
-var botao = $('header .navigation button');
+      <h1># Mixins</h1>
+      <div id="mixins">
+         <p>Sass Devtools, has mixins that will help your productivity. As an example mixins of effects <span class="auto">Transition</span>, <span class="auto">Border-Radius</span>, <span class="auto">Box-Shadow</span>, <span class="auto">Box-Sizing</span>.</p><br><br><br>
+         <h2>## Mixin of Transition</h2>
+         <p>The mixin transition is very useful for you to apply effects and rapid transition without typing a lot.</p>
+	     <br><br>
+         <span><b>@include</b> transition(all, 300ms, ease);</span>
+         <br>
+		 <div class="container">
+            <table width="100%">
+               <tr>
+                  <td align="center">Values</td>
+                  <td align="center">Information</td>
+               </tr>
+               <tr>
+                  <td align="center">All</td>
+                  <td>Method of Transition.</td>
+               </tr>
+               <tr>
+                  <td align="center">300ms</td>
+                  <td>Time of Transition.</td>
+               </tr>
+               <tr>
+                  <td align="center">Ease</td>
+                  <td>Type of Transition.</td>
+               </tr>
+            </table>
+         </div>
+         <br><br><br><br><br>
+         <h2>## Mixin of Border Radius</h2>
+         <p>The mixin Border Radius is very useful for you to apply border without typing a lot.</p>
+         <br><br>
+         <span><b>@include</b> border-radius(30px);</span>
+         <br>
+         <div class="container">
+            <table width="100%" align="center">
+               <tr>
+                  <td align="center">Values</td>
+                  <td align="center">Information</td>
+               </tr>
+               <tr>
+                  <td align="center">30px</td>
+                  <td>This is the size of Border Radius.</td>
+               </tr>
+            </table>
+         </div>
+         <br><br><br><br><br>
+         <h2>## Mixin of Box Shadow</h2>
+         <p>The mixin Box Shadow is very useful for you to apply box-shadow without typing a lot.</p>
+         <br><br>
+         <span><b>@include</b> box-shadow(2px, 10px, 30px, 40px, #000);</span>
+         <br>
+         <div class="container">
+            <table width="100%" align="center">
+               <tr>
+                  <td align="center">Values</td>
+                  <td align="center">Information</td>
+               </tr>
+               <tr>
+                  <td align="center">2px</td>
+                  <td>This is the Horizontal Offset value.</td>
+               </tr>
+               <tr>
+                  <td align="center">10px</td>
+                  <td>This is the Vertical Offset value.</td>
+               </tr>
+               <tr>
+                  <td align="center">30px</td>
+                  <td>This is the Blur Radius value.</td>
+               </tr>
+               <tr>
+                  <td align="center">40px</td>
+                  <td>This is the Spread Radius value.</td>
+               </tr>
+               <tr>
+                  <td align="center">#000000</td>
+                  <td>This is the Color value.</td>
+               </tr>
+            </table>
+         </div>
+         <br><br><br><br><br>
+         <h2>## Mixin of Box Shadow with RGBA</h2>
+         <p>The mixin Box Shadow with RGBA is very useful for you to apply box-shadow rgba without typing a lot.</p>
+         <br><br>
+         <span><b>@include</b> box-shadowRGBA(2px, 10px, 30px, 40px, 0,0,0,0);</span>
+         <br>
+         <div class="container">
+            <table width="100%" align="center">
+               <tr>
+                  <td align="center">Values</td>
+                  <td align="center">Information</td>
+               </tr>
+               <tr>
+                  <td align="center">2px</td>
+                  <td>This is the Horizontal Offset value.</td>
+               </tr>
+               <tr>
+                  <td align="center">10px</td>
+                  <td>This is the Vertical Offset value.</td>
+               </tr>
+               <tr>
+                  <td align="center">30px</td>
+                  <td>This is the Blur Radius value.</td>
+               </tr>
+               <tr>
+                  <td align="center">40px</td>
+                  <td>This is the Spread Radius value.</td>
+               </tr>
+               <tr>
+                  <td align="center">0,0,0,0</td>
+                  <td>This is the Color with RGBA value.</td>
+               </tr>
+            </table>
+         </div>
+         <br><br><br><br><br>
+         <h2>## Mixin of Inner Box Shadow</h2>
+         <p>The mixin Inner Box Shadow is very useful for you to apply box-shadow inner without typing a lot.</p>
+         <br><br>
+         <span><b>@include</b> box-shadowinnerRGBA(2px, 10px, 30px, 40px, #000000);</span>
+         <br>
+         <div class="container">
+            <table width="100%" align="center">
+               <tr>
+                  <td align="center">Values</td>
+                  <td align="center">Information</td>
+               </tr>
+               <tr>
+                  <td align="center">2px</td>
+                  <td>This is the Horizontal Offset value.</td>
+               </tr>
+               <tr>
+                  <td align="center">10px</td>
+                  <td>This is the Vertical Offset value.</td>
+               </tr>
+               <tr>
+                  <td align="center">30px</td>
+                  <td>This is the Blur Radius value.</td>
+               </tr>
+               <tr>
+                  <td align="center">40px</td>
+                  <td>This is the Spread Radius value.</td>
+               </tr>
+               <tr>
+                  <td align="center">#000000</td>
+                  <td>This is the Color value.</td>
+               </tr>
+            </table>
+         </div>
+         <br><br><br><br><br>
+         <h2>## Mixin of Inner Box Shadow with RGBA</h2>
+         <p>The mixin Inner Box Shadow with RGBA is very useful for you to apply box-shadow inner with rgba without typing a lot.</p>
+         <br><br>
+         <span><b>@include</b> box-shadowinnerRGBA(2px, 10px, 30px, 40px, 0,0,0,0);</span>
+         <div class="container">
+            <table width="100%" align="center">
+               <tr>
+                  <td align="center">Values</td>
+                  <td align="center">Information</td>
+               </tr>
+               <tr>
+                  <td align="center">2px</td>
+                  <td>This is the Horizontal Offset value.</td>
+               </tr>
+               <tr>
+                  <td align="center">10px</td>
+                  <td>This is the Vertical Offset value.</td>
+               </tr>
+               <tr>
+                  <td align="center">30px</td>
+                  <td>This is the Blur Radius value.</td>
+               </tr>
+               <tr>
+                  <td align="center">40px</td>
+                  <td>This is the Spread Radius value.</td>
+               </tr>
+               <tr>
+                  <td align="center">0,0,0,0</td>
+                  <td>This is the Color with RGBA value.</td>
+               </tr>
+            </table>
+         </div>
+         <br><br><br><br><br>
+         <h2>## Mixin of Box Sizing</h2>
+         <p>The mixin Border Sizing is very useful for you to apply Box Sizing without typing a lot.</p>
+         <br><br>
+		 <span><b>@include</b> box-sizing(box-content);</span>
+		 <br>
+		 <div class="container">
+            <table width="100%" align="center">
+               <tr>
+                  <td align="center">Values</td>
+                  <td align="center">Information</td>
+               </tr>
+               <tr>
+                  <td align="center">box-content</td>
+                  <td>This is the type of box you want.</td>
+               </tr>
+            </table>
+         </div>
+         <br><br><br><br><br>
+         <h2>## Mixin of Opacity</h2>
+         <p>The mixin Opacity is very useful for you to apply opacity without typing a lot.</p>
+         <br><br>
+		 <span><b>@include</b> opacity(0.8);</span>
+		 <br>
+		 <div class="container">
+            <table width="100%" align="center">
+               <tr>
+                  <td align="center">Values</td>
+                  <td align="center">Information</td>
+               </tr>
+               <tr>
+                  <td align="center">0.8</td>
+                  <td>This is the value of opacity.</td>
+               </tr>
+            </table>
+         </div>
+	  <h1># Functions</h1>
+	  <p>Sass Devtools also has great features that will help you, such as conversion values <span class="auto">(px to em)</span>, <span class="auto">(px to %)</span> and <span class="auto">(px to rem)</span>.</p>
+	  <br><br><br>
+	  <h2>## Function converting PX to EM</h2>
+      <span>
+         body {<br>
+		   <b>width:</b> convertoEM(10);<br>
+		 }
+      </span>
+      <p>Converts the value 10px to 0.625em</p>
+      <br><br><br>
+      <h2>## Function converting PX to %</h2>
+      <span>
+         body {<br>
+		   <b>width:</b> convertoPER(200);<br>
+		 }
+      </span>
+      <p>Converts the value 200px to 2%</p>
+      <br><br><br>
+	  <h2>## Function converting PX to REM</h2>
+	  <span>
+        body {<br>
+		  <b>width:</b> convertoREM(10);<br>
+		}
+      </span>
+      <p>Converts the value 10px to 0.625rem</p>
+      <h1># Flat Colors</h1>
+      <p>Sass Devtools also has a library of flat colors for you to use and abuse.</p>
+         <span>
+            <b>$grey;</b><br>
+            <b>$blue;</b><br>
+            <b>$yellow;</b><br>
+            <b>$green;</b><br>
+            <b>$red;</b><br>
+            <b>$midnight;</b><br>
+            <b>$dark-grey;</b><br>
+            <b>$dark-blue;</b><br>
+            <b>$dark-yellow;</b><br>
+            <b>$dark-green;</b><br>
+            <b>$dark-red;</b><br>
+            <b>$dark-midnight;</b><br>
+         </span>
+   </div>
+</div>
+</div>
 
-botao.click(function(){
-	$('header .navigation ul').slideToggle(500).css('display', 'block');
-});
-</script>
-
+<footer>
+   <div class="container">
+      <p>Sass Devtools 2014 - All Rights Reserved</p>
+      <div class="logo"></div>
+   </div>
+</footer>
+<script src="js/menu.js"></script>
 </body>
 </html>
