@@ -183,7 +183,8 @@ div:after {
 }
 ```
 
-###Mixin of Absolute Centering (How to use: <a href="http://codepen.io/shshaw/full/gEiDt">http://codepen.io/shshaw/full/gEiDt</a>)
+###Mixin of Absolute Centering
+How to use: <a href="http://codepen.io/shshaw/full/gEiDt">http://codepen.io/shshaw/full/gEiDt</a>
 ``` css
 div {
   @include absolute-center;
