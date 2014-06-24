@@ -376,7 +376,7 @@ footer .logo {
   header .navigation ul li a {
     color: #cc6699;
   }
-  header .navigation ul li a:hover {
+  header .navigation ul li a:after {
     font-family: "FontAwesome";
     content: "\f061";
     float: right;
