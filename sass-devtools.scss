@@ -37,7 +37,7 @@ $dark-midnight:                   rgb(44, 62, 80);
   }
 }
 
-@mixin box-sizing() { // Ref: http://sergiolopes.org/css-box-sizing-border-box/ && http://css-tricks.com/box-sizing/
+@mixin box-sizing { // Ref: http://sergiolopes.org/css-box-sizing-border-box/ && http://css-tricks.com/box-sizing/
     -webkit-box-sizing: border-box;
        -moz-box-sizing: border-box;
         -ms-box-sizing: border-box;
@@ -83,7 +83,7 @@ $dark-midnight:                   rgb(44, 62, 80);
           box-shadow: $first-value $second-value $third-value $fourth-value rgba($fifth-value);  
 }
 
-<<<<<<< HEAD
+
 @mixin opacity($value) { // Ref: http://css-tricks.com/css-transparency-settings-for-all-broswers/
   $ie: $value * 100;
   -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity="+$ie+")";
@@ -93,40 +93,13 @@ $dark-midnight:                   rgb(44, 62, 80);
          opacity: $value;
 }
 
-@mixin absolute-center() { // Ref: http://codepen.io/shshaw/full/gEiDt
+@mixin absolute-center { // Ref: http://codepen.io/shshaw/full/gEiDt
   margin: auto;
   position: absolute;
   top: 0;
   left: 0;
   bottom: 0;
   right: 0;
-=======
-@mixin box-shadowinner($first-value, $second-value, $third-value, $fourth-value, $fifth-value) {
-  -webkit-box-shadow: inset $first-value $second-value $third-value $fourth-value $fifth-value;
-     -moz-box-shadow: inset $first-value $second-value $third-value $fourth-value $fifth-value;
-          box-shadow: inset $first-value $second-value $third-value $fourth-value $fifth-value;
-}
-
-@mixin box-shadowinnerRGBA($first-value, $second-value, $third-value, $fourth-value, $fifth-value) {
-  -webkit-box-shadow: inset $first-value $second-value $third-value $fourth-value rgba($fifth-value);
-     -moz-box-shadow: inset $first-value $second-value $third-value $fourth-value rgba($fifth-value);
-          box-shadow: inset $first-value $second-value $third-value $fourth-value rgba($fifth-value);  
-}
-
-@mixin opacity($value) {
-  $ie: $value * 100;
-  -ms-filter: "alpha(opacity=$ie)";
-  filter: alpha(opacity=$ie);
-  -webkit-opacity: $value;
-     -moz-opacity: $value;
-          opacity: $value;
-}
-
-@mixin box-sizing {
-  -webkit-box-sizing: border-box;
-     -moz-box-sizing: border-box;
-          box-sizing: border-box;
->>>>>>> 4e614ca1e46305fca3b7722ac2c8773100358d04
 }
 
 //

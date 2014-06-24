@@ -1,4 +1,4 @@
-Sass Devtools v1.0
+Sass Devtools v1.1
 ===================
 Sass Devtools is an Open Source tool with features that will help your productivity with the SASS.
 
@@ -20,6 +20,8 @@ Then you import the .scss file that you downloaded, in your style.scss.
 - Variables
 - Function
 - Flat Colors
+- Absolute Centering
+- Clearfix
 
 #Mixins
 Sass Devtools, has mixins that will help your productivity. As an example mixins of effects Transition, Border-Radius, Box-Shadow, Box-Sizing.
@@ -130,16 +132,16 @@ body {
 The mixin Border Sizing is very useful for you to apply Box Sizing without typing a lot. 
 
 ``` css
-@include box-sizing(box-content);
+@include box-sizing;
 body {
-  @include box-sizing(box-content);  
+  @include box-sizing;  
 }
 
 /* Result */
 body {
-  -webkit-box-sizing: box-content;
-     -moz-box-sizing: box-content;
-          box-sizing: box-content;
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
 }
 ```
 
@@ -154,11 +156,45 @@ body {
 
 /* Result */
 body {
-  -ms-filter: "alpha(opacity=80)";
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=80)";
   filter: alpha(opacity=80);
-  -webkit-opacity: 0.8;
-     -moz-opacity: 0.8;
-          opacity: 0.8;
+  -khtml-opacity: 0.8;
+    -moz-opacity: 0.8;
+         opacity: 0.8;
+}
+```
+###Mixin of Clearfix
+``` css
+@include cf;
+div {
+  @include cf;
+}
+
+/* Result */
+div {
+  *zoom: 1;
+}
+div:before, div:after {
+  content: "";
+  display: table;
+}
+div:after {
+  clear: both;
+}
+```
+
+###Mixin of Absolute Centering (How to use: <a href="http://codepen.io/shshaw/full/gEiDt">http://codepen.io/shshaw/full/gEiDt</a>)
+``` css
+div {
+  @include absolute-center;
+}
+div {
+  margin: auto;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
 }
 ```
 
