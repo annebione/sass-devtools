@@ -143,6 +143,25 @@ body {
 }
 ```
 
+###Mixin of Opacity
+The mixin Opacity is very useful for you to apply opacity without typing a lot. 
+
+``` css
+@include opacity(0.8);
+body {
+  @include opacity(0.8);  
+}
+
+/* Result */
+body {
+  -ms-filter: "alpha(opacity=80)";
+  filter: alpha(opacity=80);
+  -webkit-opacity: 0.8;
+     -moz-opacity: 0.8;
+          opacity: 0.8;
+}
+```
+
 #Functions
 
 ###Function converting PX to EM
