@@ -25,8 +25,7 @@ $white: #fff;
 }
 
 ::-moz-selection {
-  background: $pink;
-  color: $white;
+  @extend ::selection;
 }
 
 .container {
@@ -345,14 +344,6 @@ footer {
   .container {
     max-width: 90%;
     margin: 0 auto;
-  }
-
-  header {
-    .navigation {
-      ul {
-        display: block;
-      }
-    }
   }
 
   header {
