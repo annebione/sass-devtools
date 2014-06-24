@@ -1,7 +1,7 @@
 //
-// Sass Devtools v.1.0
+// Sass Devtools v.1.1
 // Author: João Paulo - jaoz
-// Author: João Paulo
+// Contributor: Ney Simões - neysimoes
 // Repository: https://github.com/jaoz/sass-devtools
 // Documentation: https://jaoz.github.io/sass-devtools
 // -------------------------------------------------------------------------------------------------------------------------
@@ -21,6 +21,28 @@ $dark-yellow:                     rgb(243, 156, 18);
 $dark-green:                      rgb(22, 160, 133);
 $dark-red:                        rgb(192, 57, 43);
 $dark-midnight:                   rgb(44, 62, 80);
+
+
+//
+// Resets
+// -------------------------------------------------------------------------------------------------------------------------
+@mixin cf { // Ref: http://nicolasgallagher.com/micro-clearfix-hack/
+  *zoom: 1; // Suport IE7+
+  &:before, &:after {
+    content: "";
+    display: table;
+  }
+  &:after {
+    clear: both;
+  }
+}
+
+@mixin box-sizing() { // Ref: http://sergiolopes.org/css-box-sizing-border-box/ && http://css-tricks.com/box-sizing/
+    -webkit-box-sizing: border-box;
+       -moz-box-sizing: border-box;
+        -ms-box-sizing: border-box;
+            box-sizing: border-box;
+}
 
 //
 // Mixins
@@ -61,17 +83,22 @@ $dark-midnight:                   rgb(44, 62, 80);
           box-shadow: $first-value $second-value $third-value rgba($fourth-value);  
 }
 
-@mixin opacity($first-value, $second-value) {
-  filter: alpha(opacity=$second-value);
-  -webkit-opacity: $first-value;
-     -moz-opacity: $first-value;
-          opacity: $first-value;
+@mixin opacity($value) { // Ref: http://css-tricks.com/css-transparency-settings-for-all-broswers/
+  $ie: $value * 100;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity="+$ie+")";
+  filter: alpha(opacity=$ie);
+  -khtml-opacity: $value;
+    -moz-opacity: $value;
+         opacity: $value;
 }
 
-@mixin box-sizing {
-  -webkit-box-sizing: box-content;
-     -moz-box-sizing: box-content;
-          box-sizing: box-content;
+@mixin absolute-center() { // Ref: http://codepen.io/shshaw/full/gEiDt
+  margin: auto;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
 }
 
 //
